@@ -31,6 +31,9 @@ gulp.task('copy', ['clean'], function () {
 
     gulp.src(['img/**/*.png', 'img/**/*.jpg'], { cwd: 'app' })
         .pipe(gulp.dest('public/img'));
+
+    gulp.src(['views/**/*.html',], { cwd: 'app' })
+        .pipe(gulp.dest('public/views'));
 });
 
 
@@ -40,11 +43,10 @@ gulp.task('clean', function () {
         .pipe($.rimraf());
 });
 
-gulp.task('watch', ['default'], function() {
+gulp.task('watch', ['default'], function () {
     var watchFiles = [
-        'app/css/**/*.css',
-        'app/js/**/*.js'
+        'app/**/*'
     ];
 
-    gulp.watch(watchFiles, ['copy']);
+    gulp.watch(watchFiles, ['default']);
 });

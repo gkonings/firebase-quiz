@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
@@ -32,8 +31,8 @@
         <div class="container-fluid">
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Quiz</a></li>
-                <li><a href="#">Results</a></li>
+                <li><a href="#/quiz">Quiz</a></li>
+                <li><a href="#/ranking">Ranking</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -41,19 +40,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div class="jumbotron cover cover-council">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-10">
-                    <h1>A Jedi, you want to be? <small>hmmm?</small></h1>
-                    <p>Take the test you must. <em>Yeesssssss.</em></p>
-                    <p><a class="btn btn-effect btn-lg" href="#" role="button">Teach me, master Yoda</a></p>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
+    <div ng-view></div>
 
     <!-- Scripts -->
     <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
@@ -72,9 +59,15 @@
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
     <!-- endbuild -->
 
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.module.js"></script>
+    <script type="text/javascript" src="js/app.routes.js"></script>
+    <script type="text/javascript" src="js/quiz/quiz.controller.js"></script>
+    <script type="text/javascript" src="js/quiz/question.controller.js"></script>
+    <script type="text/javascript" src="js/quiz/result.controller.js"></script>
+    <script type="text/javascript" src="js/quiz/ranking.controller.js"></script>
 
 </body>
 
