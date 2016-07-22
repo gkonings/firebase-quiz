@@ -1,0 +1,81 @@
+body{
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.navbar{
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+h1 small,
+h2 small{
+  color: #fff;
+  font-style: italic;
+}
+
+.btn-effect{
+  background-color: royalblue;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-effect:hover, 
+.btn-effect:focus, 
+.btn-effect:active {
+  color: #fff;
+}
+
+.btn-effect:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #fff;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.btn-effect:hover:before, 
+.btn-effect:focus:before, 
+.btn-effect:active:before {
+  right: 0;
+}
+
+.questions li{
+  margin-bottom: 1em;
+}
+
+.questions .btn{
+white-space:normal !important;
+}
+
+.cover-council{
+  background: url(../images/council.png); 
+  background-size: cover;
+}
+
+.cover-dagobah{
+  background: url(../images/dagobah.jpg); 
+  background-size: cover;
+}
