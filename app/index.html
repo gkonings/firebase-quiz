@@ -10,13 +10,14 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Quiz</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- build:css /css/vendor.css -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- endbuild -->
 
-    <!-- Custom styles for this template -->
-    <link href="styles/main.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +44,7 @@
     <div class="jumbotron cover cover-council">
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 col-md-10">                 
+                <div class="col-sm-8 col-md-10">
                     <h1>A Jedi, you want to be? <small>hmmm?</small></h1>
                     <p>Take the test you must. <em>Yeesssssss.</em></p>
                     <p><a class="btn btn-effect btn-lg" href="#" role="button">Teach me, master Yoda</a></p>
@@ -54,11 +55,27 @@
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB9k-ppVNSzhbUg3RjPiJTFLzawLHKFlHc",
+        authDomain: "quiz-8985e.firebaseapp.com",
+        databaseURL: "https://quiz-8985e.firebaseio.com",
+        storageBucket: "quiz-8985e.appspot.com",
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- build:js /js/vendor.js -->
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="js/app.js"></script>
+
 </body>
 
 </html>

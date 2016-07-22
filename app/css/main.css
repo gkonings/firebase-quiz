@@ -71,11 +71,11 @@ white-space:normal !important;
 }
 
 .cover-council{
-  background: url(../images/council.png); 
+  background: url(../img/council.png); 
   background-size: cover;
 }
 
 .cover-dagobah{
-  background: url(../images/dagobah.jpg); 
+  background: url(../img/dagobah.jpg); 
   background-size: cover;
 }

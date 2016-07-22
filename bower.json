@@ -1,0 +1,23 @@
+{
+  "name": "quiz",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Gerard Konings"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "^1.5.8"
+  }
+}
