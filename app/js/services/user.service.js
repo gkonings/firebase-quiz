@@ -6,11 +6,10 @@
         .factory('userService', userService);
 
     /* @ngInject */
-    userService.$inject = ['$q', '$firebaseAuth', '$firebaseArray'];
+    userService.$inject = ['$q', '$firebaseArray'];
 
-    function userService($q, $firebaseAuth, $firebaseArray) {
+    function userService($q, $firebaseArray) {
 
-        var authObj;
         var currentUser;
 
         var service = {
@@ -30,19 +29,10 @@
 
         function createUser(name) {
 
-            authObj = $firebaseAuth();
-            return authObj.$signInAnonymously().then(function (firebaseUser) {
-                currentUser = {
-                    name: name,
-                    score: 0,
-                    uid: firebaseUser.uid
-                };
-            }).catch(function (error) {
-                console.error("Authentication failed:", error);
-                return $q.reject();
-            });
-
-
+            currentUser = {
+                name: name,
+                score: 0,
+            };
         }
 
         function addPoints(points) {
@@ -57,8 +47,8 @@
             var ref = firebase.database().ref().child("ranking");
             var ranking = $firebaseArray(ref);
             ranking.$add(currentUser).then(function () {
-                
-                
+
+
             });
         }
 
