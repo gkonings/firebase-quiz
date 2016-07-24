@@ -14,10 +14,6 @@
 
         vm.register = register;
 
-        init();
-
-        function init() { };
-
         function register(form) {
             if (form.$valid) {
                 userService.createUser(form.name.$modelValue);

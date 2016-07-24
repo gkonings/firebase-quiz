@@ -36,23 +36,24 @@
         }
 
         function addPoints(points) {
-            currentUser.score += points;
+            if (currentUser) {
+                currentUser.score += points;
+            }
         }
 
         function getScore() {
-            return currentUser.score;
+            if (currentUser) {
+                return currentUser.score;
+            }
+            return 0;
         }
 
         function publishScore() {
-            var ref = firebase.database().ref().child("ranking");
-            var ranking = $firebaseArray(ref);
-            ranking.$add(currentUser).then(function () {
-
-
-            });
+            if (currentUser) {
+                var ref = firebase.database().ref().child("ranking");
+                var ranking = $firebaseArray(ref);
+                ranking.$add(currentUser);
+            }
         }
-
-
-
     };
 })();

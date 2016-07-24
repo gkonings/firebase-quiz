@@ -3,7 +3,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <img src="img/{{vm.q.image}}" class="img img-responsive full-width margin-after" />
+            <div class="image-container margin-after">
+                <img src="img/{{vm.q.image}}" class="img img-responsive full-width" />
+            </div>
         </div>
         <div class="col-sm-8">
             <h2>{{vm.q.question}}</h2>
@@ -17,7 +19,7 @@
                 </li>
 
             </ul>
-            <countdown ng-model="vm.time" ng-change="vm.setAnswer()" ng-if="vm.q.answers" ></countdown>
+            <countdown ng-model="vm.time" ng-change="vm.setAnswer()" ng-if="vm.q.answers"></countdown>
         </div>
     </div>
 
