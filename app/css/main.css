@@ -1,7 +1,7 @@
 body{
-  background-color: #333;
+  background-color: goldenrod;
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 1px 3px rgba(0,0,0,1);
 }
 
 .navbar{
@@ -10,14 +10,17 @@ body{
   margin-bottom: 0;
 }
 
-h1 small,
-h2 small{
-  color: #fff;
-  font-style: italic;
+.content{
+  position: relative;
+  margin-top: 3em;
+  }
+
+h1, h2 {
+  margin-top: 0;
 }
 
 .btn-effect{
-  background-color: royalblue;
+  background-color: #222;
   color: #fff;
   border: 0;
   border-radius: 0;
@@ -62,6 +65,15 @@ h2 small{
   right: 0;
 }
 
+.register .form-control{
+  margin-bottom: 1em;
+  border-radius: 0;
+  line-height: 24px;
+  padding: 10px 16px;
+  font-size: 18px;
+  height: 44px;
+}
+
 .questions li{
   margin-bottom: 1em;
 }
@@ -70,12 +82,36 @@ h2 small{
 white-space:normal !important;
 }
 
-.cover-council{
-  background: url(../img/council.png); 
-  background-size: cover;
+.margin-after{
+  margin-bottom: 2em;
 }
 
-.cover-dagobah{
-  background: url(../img/dagobah.jpg); 
-  background-size: cover;
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.slide.ng-enter {
+    left: 100%;
+}
+.slide.ng-enter-active {
+    left: 0;
+}
+.slide.ng-leave {
+    left: 0;
+}
+.slide.ng-leave-active {
+    left: -100%;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    color: #333;
+    text-shadow: 0 1px 3px rgba(0,0,0,.2);
 }

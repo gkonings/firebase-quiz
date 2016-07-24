@@ -1,1 +1,10 @@
-<strong>ranking</strong>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Naam</th>
+        <th>Score</th>
+    </tr>
+    <tr ng-repeat="result in ranking | orderBy:'-score'">
+        <td>{{result.name}}</td>
+        <td>{{result.score}}</td>
+    </tr>
+</table>

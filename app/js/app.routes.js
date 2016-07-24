@@ -13,19 +13,28 @@
         $routeProvider.
             when('/quiz', {
                 templateUrl: 'views/quiz.html',
-                controller: 'QuizController'
+                controller: 'QuizController',
+                controllerAs: 'vm'
+            }).
+            when('/register/', {
+                templateUrl: 'views/register.html',
+                controller: 'RegisterController',
+                controllerAs: 'vm'
             }).
             when('/question/:qId', {
                 templateUrl: 'views/question.html',
-                controller: 'QuestionController'
+                controller: 'QuestionController',
+                controllerAs: 'vm'
             }).
             when('/result/', {
                 templateUrl: 'views/result.html',
-                controller: 'ResultController'
+                controller: 'ResultController',
+                controllerAs: 'vm'
             }).
             when('/ranking/', {
                 templateUrl: 'views/ranking.html',
-                controller: 'RankingController'
+                controller: 'RankingController',
+                controllerAs: 'vm'
             }).
             otherwise('/quiz');
     }

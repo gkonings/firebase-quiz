@@ -1,43 +1,25 @@
-<div class="jumbotron cover cover-dagobah">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>About the future you tell me <small>hmmm?</small></h2>
-                    <ul class="list-unstyled questions">
-                        <li>
-                            <a class="btn btn-effect btn-lg btn-block" href="#" role="button">
+{{vm.questions}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="img/{{vm.q.image}}" class="img img-responsive full-width margin-after" />
+        </div>
+        <div class="col-sm-8">
+            <h2>{{vm.q.question}}</h2>
+            <ul class="list-unstyled questions">
+                <li ng-repeat="answer in vm.q.answers">
+                    <button class="btn btn-effect btn-lg btn-block" ng-click="vm.setAnswer(answer)">
                                 <span>
-                                    The future is dark, and full of terrors
+                                    {{answer.answer}}
                                 </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn btn-effect btn-lg btn-block" href="#" role="button">
-                             It's like a big ball of wibbly wobbly... timey wimey... stuff.
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn btn-effect btn-lg btn-block" href="#" role="button">
-                             Always in motion the future is.
-                            </a>
+                            </button>
+                </li>
 
-                        </li>
-                        <li>
-                            <a class="btn btn-effect btn-lg btn-block" href="#" role="button">
-                             This is heavy
-                            </a>
-
-                        </li>
-                    </ul>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                            style="width: 40%">
-                            <span class="sr-only">40% Complete (success)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            </ul>
+            <countdown ng-model="vm.time" ng-change="vm.setAnswer()" ng-if="vm.q.answers" ></countdown>
         </div>
     </div>
+
+
+</div>
