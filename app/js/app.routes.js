@@ -31,11 +31,6 @@
                 controller: 'ResultController',
                 controllerAs: 'vm'
             }).
-            when('/ranking/', {
-                templateUrl: 'views/ranking.html',
-                controller: 'RankingController',
-                controllerAs: 'vm'
-            }).
             otherwise('/quiz');
     }
 
