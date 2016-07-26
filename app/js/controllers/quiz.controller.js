@@ -5,7 +5,10 @@
         .module('app')
         .controller('QuizController', quizController);
 
+    /* @ngInject */
+    //quizController.$inject = [];
+    function quizController() {
 
-        function quizController(){};
+    };
 
 })();
