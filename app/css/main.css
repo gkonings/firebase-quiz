@@ -136,3 +136,16 @@ white-space:normal !important;
   position: absolute;
   width: 100%;
 }
+
+.score{
+  color: gold;
+  text-shadow: 0 1px 3px rgba(0,0,0,1);
+  margin-bottom: 0;
+}
+.score li{
+  padding: 0 0.1em;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) .score {
+    
+}

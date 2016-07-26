@@ -5,6 +5,8 @@
     </tr>
     <tr ng-repeat="result in ranking | orderBy:'-score'">
         <td>{{result.name}}</td>
-        <td>{{result.score}}</td>
+        <td>
+            <score value="result.score"></score>
+        </td>
     </tr>
 </table>
