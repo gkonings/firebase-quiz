@@ -3,16 +3,15 @@ html{
 }
 
 body{
-  /*//background-color: goldenrod;*/
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,1);
   background: #ED8F03;  
 background: -webkit-linear-gradient(top, #ED8F03, #FFB75E);
 background: -o-linear-gradient(top, #ED8F03, #FFB75E);
 background: linear-gradient(top, #ED8F03, #FFB75E); 
-
   background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 
 .navbar{
