@@ -6,9 +6,9 @@
         .controller('QuestionController', questionController);
 
     /* @ngInject */
-    questionController.$inject = ['$routeParams', '$location', '$firebaseObject', 'questionDataservice', 'userService'];
+    questionController.$inject = ['$routeParams', '$location', '$firebaseObject', 'userService'];
 
-    function questionController($routeParams, $location, $firebaseObject, questionDataservice, userService) {
+    function questionController($routeParams, $location, $firebaseObject, userService) {
 
         var vm = this;
         var qId = parseInt($routeParams.qId);

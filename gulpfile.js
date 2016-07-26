@@ -1,7 +1,8 @@
-// reference: https://gist.github.com/dshafik/07dc3985b5f4888865ea
+// based on: https://gist.github.com/dshafik/07dc3985b5f4888865ea
 
 var gulp = require('gulp');
-$ = require('gulp-load-plugins')(); // Note the extra parens
+var del = require('del');
+$ = require('gulp-load-plugins')();
 
 gulp.task('default', ['minify', 'fix-paths', 'copy']);
 
@@ -38,9 +39,9 @@ gulp.task('copy', ['clean'], function () {
 
 
 gulp.task('clean', function () {
-    var generated = ['public/js/vendor.js', 'public/css/vendor.css', 'public/index.html'];
-    return gulp.src(generated)
-        .pipe($.rimraf());
+    return del([
+    'public/**/*'
+  ]);
 });
 
 gulp.task('watch', ['default'], function () {
