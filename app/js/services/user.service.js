@@ -6,9 +6,9 @@
         .factory('userService', userService);
 
     /* @ngInject */
-    userService.$inject = ['$q', '$firebaseArray'];
+    userService.$inject = ['$q', '$firebaseArray', '$firebaseAuth'];
 
-    function userService($q, $firebaseArray) {
+    function userService($q, $firebaseArray, $firebaseAuth) {
 
         var currentUser;
 
@@ -28,6 +28,15 @@
         }
 
         function createUser(name) {
+
+            var auth = $firebaseAuth();
+            auth.$signInAnonymously();
+
+            auth.$signInAnonymously().then(function (firebaseUser) {
+                $scope.firebaseUser = firebaseUser;
+            }).catch(function (error) {
+                $scope.error = error;
+            });
 
             currentUser = {
                 name: name,
